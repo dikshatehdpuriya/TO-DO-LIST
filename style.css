@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-image:url(image.jpg);
+}
+
+.container{
+    width:400px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+    color:#333;
+}
+
+.input-area{
+    display:flex;
+    gap:10px;
+}
+
+.input-area input{
+    flex:1;
+    padding:12px;
+    border:2px solid #ddd;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.input-area button{
+    width:50px;
+    border:none;
+    background:#d7c015;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:20px;
+    transition:.3s;
+}
+
+.input-area button:hover{
+    background:#28a351;
+}
+
+#taskList{
+    margin-top:20px;
+    list-style:none;
+}
+
+.task{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#f5f5f5;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:8px;
+    animation:fade .3s;
+}
+
+.task.completed span{
+    text-decoration:line-through;
+    color:gray;
+}
+
+.icons i{
+    cursor:pointer;
+    margin-left:15px;
+    font-size:18px;
+}
+
+.fa-check{
+    color:green;
+}
+
+.fa-trash{
+    color:red;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
